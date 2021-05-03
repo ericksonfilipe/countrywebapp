@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Country Details</title>
+</head>
+<body>
+<div align="center">
+    <div th:each="c : ${country}">
+        <img th:src="${c.flagFileUrl}" width="80" />
+        <h1 th:text="${c.name}"></h1>
+        </br>
+        <strong>Population: </strong> [[${c.population}]]
+        </br>
+        <strong>Capital: </strong>  [[${c.capital}]]
+        </br>
+        <strong>Country Code: </strong> [[${c.countryCode}]]
+    </div>
+</div>
+</body>
+</html>
